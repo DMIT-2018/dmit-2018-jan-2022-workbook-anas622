@@ -16,11 +16,11 @@ namespace ChinookSystem.Entities
             Tracks = new HashSet<Track>();
         }
 
-
+        //the properties which actually contain "real" data
         [Key]
         public int AlbumId { get; set; }
-        [Required(ErrorMessage = "Album title is required")]
-        [StringLength(160, MinimumLength = 8, ErrorMessage = "Album title is limited to 160 characters")]
+        [Required(ErrorMessage ="Album title is required")]
+        [StringLength(160, ErrorMessage ="Album title is limited to 160 characters")]
         public string Title { get; set; }
         public int ArtistId { get; set; }
         public int ReleaseYear { get; set; }
@@ -28,6 +28,9 @@ namespace ChinookSystem.Entities
         [Unicode(false)]
         public string ReleaseLabel { get; set; }
 
+        //the navigational properties
+        //do not contain actual data, reference connections between table
+        //ONLY in "context" when the query is executing
         [ForeignKey(nameof(ArtistId))]
         [InverseProperty("Albums")]
         public virtual Artist Artist { get; set; }

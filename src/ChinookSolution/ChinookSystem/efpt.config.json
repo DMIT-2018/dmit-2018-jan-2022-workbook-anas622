@@ -62,12 +62,13 @@
          "ObjectType": 0
       }
    ],
-   "UiHint": "ECHO.Chinook",
+   "UiHint": "DESKTOP-SV18SD0.Chinook",
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": true,
    "UseDbContextSplitting": false,
    "UseFluentApiOnly": false,
    "UseHandleBars": false,
+   "UseHierarchyId": false,
    "UseInflector": true,
    "UseLegacyPluralizer": false,
    "UseManyToManyEntity": false,
